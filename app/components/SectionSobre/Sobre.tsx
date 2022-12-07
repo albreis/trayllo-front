@@ -12,8 +12,8 @@ export default function SectionSobre() {
               <button className={styles.contactInput}>FALE COM A GENTE</button>
             </div>
             <div className={styles.sobreImgs}>
-                <Image src={require('./../../public/sobreImg.png')} alt="Imagem"/>
-                <Image src={require('./../../public/sobreImg2.png')} alt="Imagem"/>
+                <Image src={require('app\public\sobreImg.png')} alt="Imagem"/>
+                <Image src={require('app\public\sobreImg2.png')} alt="Imagem"/>
             </div>
           </div>
         </section>
