@@ -10,6 +10,7 @@ module.exports = {
       'white': '#fff',
       'transparent': '#00000000',
       'primary': {
+        'extra-light': '#f3e8ff',
         light: '#E0AFFF',
         DEFAULT: '#490177',
       },
@@ -53,7 +54,7 @@ module.exports = {
         },
         slideIn2: {
           '0%': { transform: 'translateX(-100vw)' },
-          '50%': { transform: 'translateX(-50vw)' },
+          '50%': { transform: 'translateX(-100vw)' },
           '100%': { transform: 'translateX(0vw)' },
         },
         slideIn3: {
