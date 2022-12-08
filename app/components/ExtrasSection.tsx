@@ -1,20 +1,33 @@
 import SafeArea from "./SafeArea";
 import YoutubeEmbed from "./YoutubeEmbed";
 
-const YT_VIDEO_ID = 'xky48zyL9iA'
-const VIDEO_WIDTH = 895
-const VIDEO_HEIGHT = 559
-//https://www.youtube.com/watch?v=xky48zyL9iA
+export interface ExtrasPropsData {
+  titulo: string,
+  video: string,
+  videoData: {
+    id: string,
+    width: number,
+    height: number,
+  }
+}
 
-export default function ExtrasSection(){
+interface Props {
+  data: ExtrasPropsData
+}
+
+export default function ExtrasSection({data}:Props){
 
   return(
     <section>
       <SafeArea>
         <div className="">
-          <header className="w-[558px] max-md:w-full m-auto"><h2 id='extras' className="text-primary text-xl max-md:text-lg font-extrabold text-center py-10 font-sans">O que posso fazer com essa integração?</h2></header>
+          <header className="w-[558px] max-md:w-full m-auto">
+            <h2 id='extras' className="text-primary text-xl max-md:text-lg font-extrabold text-center py-10 font-sans">
+              {data.titulo}
+            </h2>
+          </header>
           <div className="rounded-md overflow-hidden">
-            <YoutubeEmbed  embedId={YT_VIDEO_ID} width={VIDEO_WIDTH} height={VIDEO_HEIGHT}/>
+            <YoutubeEmbed videoUrl={data.video} width={data.videoData.width} height={data.videoData.height}/>
           </div>
         </div>
       </SafeArea>
