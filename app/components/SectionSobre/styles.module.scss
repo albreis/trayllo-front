@@ -7,12 +7,12 @@
   flex-direction: column;
   justify-content: center;
   align-items: center;
-  background-color: #f6f6f6;
+  background-color: #fff;
   padding: 4rem 0;
 
   .contentSobre {
-    width: 70%;
-    min-width: 786px;
+    width: 90%;
+    height: 100%;
     display: flex;
     justify-content: space-between;
     align-items: center;
@@ -20,8 +20,10 @@
     .sobreText {
       display: flex;
       flex-direction: column;
-      max-width: 600px;
-      padding: 2rem;
+      padding: 1rem;
+      margin: 0 1rem 0 0;
+      width: 100%;
+      height: 100%;
 
       h1 {
         color: #490177;
@@ -40,8 +42,8 @@
           height: 100%;
           width: 130%;
           top: 0;
-          left: -30%;
-          background: #f6f6f6;
+          right: 0;
+          background: #fff;
           animation: appearText 4s linear forwards;
           -webkit-animation: appearText 4s linear forwards;
           transform: matrix(1, 0, -0.23, 1, 0, 0);
@@ -53,7 +55,7 @@
 
         @keyframes appearText {
           to {
-            left: 130%;
+            width: 0;
           }
         }
 
@@ -70,20 +72,22 @@
         -moz-border-radius: 5px;
         -ms-border-radius: 5px;
         -o-border-radius: 5px;
-        padding: 15px 5px;
+        padding: 10px 5px;
         cursor: pointer;
       }
     }
 
     .sobreImgs {
       display: flex;
-      width: 668.86px;
-      height: 413.3px;
+      justify-content: center;
+      align-items: center;
+      width: 100%;
+      height:500px;
+
 
       img {
         opacity: 0;
-        width: 80%;
-        min-width: 200px;
+        width: 40%;
         height: 100%;
         border-radius: 5px;
         box-shadow: 2px 2px 2px 2px #f6f6f6;
@@ -110,27 +114,37 @@
   }
 }
 
-@media (max-width: 850px) {
+@media (max-width: 1120px) {
 
   .contentSobre {
     flex-direction: column;
+    min-height: 900px;
     width: 90%;
 
     .sobreText {
-      width: 80%;
+      max-width: 100%;
+      margin: 0 !important;
+      padding: 0 0 1rem !important;
 
-      p {
-        width: 80%;
-      }
       button {
-        width: 100%;
-        min-width:400px;
+        min-width:90%;
+        align-self: center;
       }
     }
 
     .sobreImgs {
+      margin: 20px 0;
+      max-width: 80%;
+
       img {
-        width: 60%;
+        width: auto!important;
+        margin-left:5px;
+        max-width: 55%;
+        transform: matrix(0.98, 0, -0.1, 1, 0, 0)!important;
+        -webkit-transform: (0.98, 0, -0.1, 1, 0, 0);
+        -moz-transform: (0.98, 0, -0.1, 1, 0, 0);
+        -ms-transform: matrix(0.98, 0, -0.1, 1, 0, 0);
+        -o-transform: matrix(0.98, 0, -0.1, 1, 0, 0);
       }
     }
   }
